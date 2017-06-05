@@ -2,7 +2,7 @@ galaxy_info:
   author: HungryUp
   company: HungryUp
   license: GPLv3
-  min_ansible_version: 1.2
+  min_ansible_version: 1.6 #Support of homebrew cask
   platforms:
     - name: MacOSX
       versions:

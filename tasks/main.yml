@@ -1,2 +1,31 @@
 ---
-# tasks file for HungryUp.desktop-dev
+- name: "Setup homebrew tapes"
+  homebrew_tap:
+    name:
+      - caskroom/cask
+      - caskroom/versions
+    state: present
+- name: "Update homebrew and upgrade all packages"
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- name: "Install from homebrew"
+  homebrew:
+    name:
+      - bash-completion
+      - translate-shell
+      - ansible
+    state: present
+
+- name: "Install from homebrew cask"
+  homebrew_cask:
+    name:
+      - 1password # password manager
+      - keka # unarchive
+      - slack # chat
+      - spectacle # window manager
+      - vlc # video player
+      - numi # calc
+      - firefox #browser
+    state: present
